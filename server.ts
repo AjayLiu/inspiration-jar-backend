@@ -22,12 +22,12 @@ app.use(express.json());
 const sessionConfig = require("./session");
 app.use(sessionConfig);
 
-app.use(
-  express.static(path.join(__dirname, "../client/out"), {
-    // index: false,
-    extensions: ["html"],
-  })
-);
+// app.use(
+//   express.static(path.join(__dirname, "../client/out"), {
+//     // index: false,
+//     extensions: ["html"],
+//   })
+// );
 // app.use(express.static(path.join(__dirname, "../client/out")));
 
 //Routes//
