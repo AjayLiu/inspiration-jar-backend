@@ -55,7 +55,7 @@ login.get(
     }
 
     if (process.env.NODE_ENV === "production") {
-      res.redirect("https://inspiration-jar.onrender.com/account");
+      res.redirect("https://inspiration-jar-frontend.onrender.com/account");
     } else {
       res.redirect("http://localhost:3000/account");
     }
