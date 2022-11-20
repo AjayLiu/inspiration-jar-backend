@@ -91,7 +91,7 @@ const purge = async () => {
 
 login.get("/", async (req, res) => {
   try {
-    // console.log(req);
+    console.log(req);
     const email = req.session.passport.user;
     if (email == undefined) {
       res.status(400);
