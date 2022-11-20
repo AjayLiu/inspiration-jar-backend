@@ -25,7 +25,7 @@ passport.use(
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
       callbackURL:
         process.env.NODE_ENV === "production"
-          ? "https://inspiration-jar-backend.ajayliu.com/api/login/google/callback"
+          ? "https://inspiration-jar-backend.onrender.com/api/login/google/callback"
           : "http://localhost:5000/api/login/google/callback",
     },
     function (accessToken, refreshToken, profile, cb) {
@@ -55,7 +55,7 @@ login.get(
     }
 
     if (process.env.NODE_ENV === "production") {
-      res.redirect("https://inspiration-jar.ajayliu.com/account");
+      res.redirect("https://inspiration-jar.onrender.com/account");
     } else {
       res.redirect("http://localhost:3000/account");
     }
@@ -66,7 +66,7 @@ login.get("/logout", async (req, res) => {
   try {
     await req.logout();
     await purge();
-    res.redirect("https://inspiration-jar.ajayliu.com/account");
+    res.redirect("https://inspiration-jar.onrender.com/account");
     // res.json("successfully logged out");
   } catch (err) {
     console.error(err);
