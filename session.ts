@@ -17,7 +17,8 @@ const sessionConfig = session({
   secret: SESS_SECRET,
   cookie: {
     httpOnly: true,
-    sameSite: false,
+    sameSite: "lax",
+    domain: "ajayliu.com",
     // secure: process.env.NODE_ENV === "production",
     maxAge: 1000 * 60 * 60 * 24 * 30, // 30 days
   },
